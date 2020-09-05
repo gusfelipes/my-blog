@@ -1,6 +1,5 @@
 import React from "react"
 import PropTypes from "prop-types"
-import Profile from "../Profile"
 import SideBar from "../SideBar"
 import GlobalStyles from "../../styles/global"
 
