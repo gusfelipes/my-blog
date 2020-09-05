@@ -1,6 +1,9 @@
 import React from "react"
 import PropTypes from "prop-types"
+
 import SideBar from "../SideBar"
+import MenuBar from "../MenuBar"
+
 import GlobalStyles from "../../styles/global"
 
 import * as S from "./styled"
@@ -11,6 +14,7 @@ const Layout = ({ children }) => {
       <GlobalStyles />
       <SideBar />
       <S.LayoutMain>{children}</S.LayoutMain>
+      <MenuBar />
     </S.LayoutWrapper>
   )
 }
