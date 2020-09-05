@@ -4,7 +4,7 @@ import { useStaticQuery, graphql } from "gatsby"
 const Profile = () => {
   const {
     site: {
-      siteMetaData: { title, position, description },
+      siteMetadata: { title, position, description },
     },
   } = useStaticQuery(graphql`
     query MySiteMetaData {
@@ -17,7 +17,6 @@ const Profile = () => {
       }
     }
   `)
-
   return (
     <div className="Profile-wrapper">
       <h1>{title}</h1>
