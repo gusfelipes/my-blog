@@ -13,6 +13,7 @@ const postsQuery = `{
                     date(formatString: "DD [de] MMMM [de] YYYY", locale: "pt-br")
                     description
                     title
+                    background
                 }
                 excerpt(pruneLength:5000)
             }
