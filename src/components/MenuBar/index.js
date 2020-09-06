@@ -5,17 +5,24 @@ import { SearchAlt as Search } from "@styled-icons/boxicons-regular/SearchAlt"
 import { UpArrowAlt as UpArrow } from "@styled-icons/boxicons-regular/UpArrowAlt"
 import { LightBulb } from "@styled-icons/octicons/LightBulb"
 import { Grid } from "@styled-icons/boxicons-solid/Grid"
+import { List } from "@styled-icons/bootstrap/List"
 
 import * as S from "./styled"
 
 const MenuBar = () => {
   const [theme, setTheme] = useState(null)
+  const [display, setDisplay] = useState(null)
 
   const isDarkMode = theme === "dark"
+  const isListMode = display === "list"
 
   useEffect(() => {
     setTheme(window.__theme)
+    setDisplay(window.__display)
+
     window.__onThemeChange = () => setTheme(window.__theme)
+
+    window.__onDisplayChange = () => setDisplay(window.__display)
   }, [])
 
   return (
@@ -42,8 +49,14 @@ const MenuBar = () => {
         >
           <LightBulb />
         </S.MenuBarItem>
-        <S.MenuBarItem title="Mudar visualização">
-          <Grid />
+        <S.MenuBarItem
+          title="Mudar visualização"
+          onClick={() => {
+            window.__setPreferredDisplay(isListMode ? "grid" : "list")
+            // className = { display }
+          }}
+        >
+          {isListMode ? <Grid /> : <List />}
         </S.MenuBarItem>
         <S.MenuBarItem title="Ir para o topo">
           <UpArrow />
