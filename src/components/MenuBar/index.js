@@ -28,7 +28,13 @@ const MenuBar = () => {
   return (
     <S.MenuBarWrapper>
       <S.MenuBarGroup>
-        <S.MenuBarLink to="/" alt="Voltar para Home">
+        <S.MenuBarLink
+          cover
+          direction="left"
+          bg="#16202c"
+          to="/"
+          alt="Voltar para Home"
+        >
           <S.MenuBarItem>
             <Home />
           </S.MenuBarItem>
