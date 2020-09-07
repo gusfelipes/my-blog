@@ -8,7 +8,7 @@ module.exports = {
     position: "Fullstack Developer",
     description: `a blog about fullstack development and other stuff`,
     author: `@gusfelipes`,
-    siteUrl: `https://johndoe.com.br`,
+    siteUrl: `https://gusfelipes.netlify.app/`,
   },
   plugins: [
     `gatsby-plugin-transition-link`,
