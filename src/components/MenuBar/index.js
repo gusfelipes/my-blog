@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react"
 
+import getThemeColor from "../../utils/getThemeColor"
+
 import { Home } from "@styled-icons/boxicons-regular/Home"
 import { SearchAlt as Search } from "@styled-icons/boxicons-regular/SearchAlt"
 import { UpArrowAlt as UpArrow } from "@styled-icons/boxicons-regular/UpArrowAlt"
@@ -31,7 +33,7 @@ const MenuBar = () => {
         <S.MenuBarLink
           cover
           direction="left"
-          bg="#16202c"
+          bg={getThemeColor()}
           to="/"
           alt="Voltar para Home"
         >
