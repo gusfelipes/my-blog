@@ -13,7 +13,10 @@ const BlogPost = ({ data, pageContext }) => {
   const next = pageContext.nextPost
   const previous = pageContext.previousPost
 
-  const pathImage = post.frontmatter.image.absolutePath.slice(37)
+  const pathImage =
+    post.frontmatter.image === null
+      ? ""
+      : post.frontmatter.image.absolutePath.slice(37)
 
   return (
     <Layout>
