@@ -10,6 +10,7 @@ module.exports = {
     author: `@gusfelipes`,
   },
   plugins: [
+    `gatsby-plugin-transition-link`,
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-react-helmet`,
     //precisa vir em primeiro lugar
