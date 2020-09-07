@@ -1,7 +1,6 @@
 import styled from "styled-components"
 import media from "styled-media-query"
 
-import { Link } from "gatsby"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 
 export const MenuLinksWrapper = styled.nav`

@@ -8,12 +8,13 @@ module.exports = {
     position: "Fullstack Developer",
     description: `a blog about fullstack development and other stuff`,
     author: `@gusfelipes`,
+    siteUrl: `https://johndoe.com.br`,
   },
   plugins: [
     `gatsby-plugin-transition-link`,
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-react-helmet`,
-    //precisa vir em primeiro lugar
+    //precisa vir em primeiro lugar com gatsby-remark-images
     {
       resolve: `gatsby-source-filesystem`,
       options: {

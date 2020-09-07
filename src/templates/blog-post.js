@@ -13,9 +13,15 @@ const BlogPost = ({ data, pageContext }) => {
   const next = pageContext.nextPost
   const previous = pageContext.previousPost
 
+  const pathImage = post.frontmatter.image.absolutePath.slice(37)
+
   return (
     <Layout>
-      <SEO title={post.frontmatter.title} />
+      <SEO
+        title={post.frontmatter.title}
+        description={post.frontmatter.description}
+        image={pathImage}
+      />
       <S.PostHeader>
         <S.PostDate>
           {post.frontmatter.date} • {post.timeToRead} min de leitura
@@ -43,6 +49,9 @@ export const query = graphql`
         description
         date(formatString: "DD [de] MMMM [de] YYYY", locale: "pt-br")
         description
+        image {
+          absolutePath
+        }
       }
       html
       timeToRead
