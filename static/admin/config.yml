@@ -24,4 +24,21 @@ collections:
           format: "YYYY-MM-DD hh:mm:ss",
         }
       - { label: "image", name: "thumbnail", widget: "image" }
+      - {
+          label: "Category",
+          name: "category",
+          widget: "select",
+          options: ["misc", "dev"],
+        }
+      - {
+          label: "Background",
+          name: "background",
+          widget: "select",
+          options:
+            [
+              { label: "Dev", value: "#637a91" },
+              { label: "Misc", value: "#7AAB13" },
+            ],
+        }
+
       - { label: "Body", name: "body", widget: "markdown" }
